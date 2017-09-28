@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/dustin/go-coap"
+	"github.com/ihxzihxz/go-coap"
 )
 
 func main() {

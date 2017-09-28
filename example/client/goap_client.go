@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/dustin/go-coap"
+	"github.com/ihxzihxz/go-coap"
 )
 
 func main() {
@@ -16,7 +16,7 @@ func main() {
 		Payload:   []byte("hello, world!"),
 	}
 
-	path := "/some/path"
+	path := "/a"
 	if len(os.Args) > 1 {
 		path = os.Args[1]
 	}
@@ -25,7 +25,7 @@ func main() {
 	req.SetOption(coap.MaxAge, 3)
 	req.SetPathString(path)
 
-	c, err := coap.Dial("udp", "localhost:5683")
+	c, err := coap.Dial("udp", "localhost:8080")
 	if err != nil {
 		log.Fatalf("Error dialing: %v", err)
 	}

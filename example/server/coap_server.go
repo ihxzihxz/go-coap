@@ -4,7 +4,7 @@ import (
 	"log"
 	"net"
 
-	"github.com/dustin/go-coap"
+	"github.com/ihxzihxz/go-coap"
 )
 
 func handleA(l *net.UDPConn, a *net.UDPAddr, m *coap.Message) *coap.Message {
@@ -48,5 +48,5 @@ func main() {
 	mux.Handle("/a", coap.FuncHandler(handleA))
 	mux.Handle("/b", coap.FuncHandler(handleB))
 
-	log.Fatal(coap.ListenAndServe("udp", ":5683", mux))
+	log.Fatal(coap.ListenAndServe("udp", ":8080", mux))
 }
